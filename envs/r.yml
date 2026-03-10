@@ -1,0 +1,8 @@
+name: snakemake-r
+channels:
+  - conda-forge
+dependencies:
+  - r-base=4.2
+  - r-ggplot2
+  - r-optparse   # optional if you want argument parsing in R
+  - r-readr      # optional, but ggplot/read.csv is fine

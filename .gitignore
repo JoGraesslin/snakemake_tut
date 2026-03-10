@@ -1,0 +1,6 @@
+.snakemake/
+data/
+plots/
+*.png
+*.csv
+__pycache__/
