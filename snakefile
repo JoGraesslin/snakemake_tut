@@ -4,7 +4,7 @@ SAMPLES = config["samples"]
 
 rule all:
     input:
-        expand("plots/pandas_plot_{n}.png", n=SAMPLES)
+        expand("plots/out_plot_{n}.png", n=SAMPLES)
 
 
 rule make_csv:
@@ -20,7 +20,7 @@ rule plot_png:
     input:
         "data/pandas_out_{n}.csv"
     output:
-        "plots/pandas_plot_{n}.png"
+        "plots/out_plot_{n}.png"
     conda:
         "envs/r.yml"
     shell:

@@ -1,6 +1,5 @@
 #!/bin/bash
 mamba activate snakemake
 snakemake --use-conda \
-    --rerun-triggers mtime \
-    --cores 1
- #mtime,code,params,input
+      --cores 1
+ #    --rerun-triggers mtime,code,params,input
