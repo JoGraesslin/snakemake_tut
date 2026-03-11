@@ -10,6 +10,7 @@ infile <- args[1]
 outfile <- args[2]
 
 library(ggplot2)
+library(cowplot)
 
 df <- read.csv(infile)
 
@@ -18,7 +19,7 @@ p <- ggplot(df, aes(x = x, y = y)) +
   geom_point(size = 2, shape = 8,color='purple') +
   labs(title = paste("Scatter of x vs y (N =", nrow(df), ")"),
        x = "x", y = "y") +
-  theme_minimal()
+  theme_cowplot()
 
 # Use ggsave (it guesses device by extension)
 ggsave(filename = outfile, plot = p, width = 5, height = 4, units = "in", dpi = 150)
