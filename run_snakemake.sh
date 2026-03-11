@@ -1,4 +1,5 @@
 #!/bin/bash
+
 mamba activate snakemake
 snakemake --use-conda \
       --cores 1
